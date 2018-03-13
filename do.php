@@ -16,30 +16,20 @@ $result = mysqli_query($link, $query);
 echo "$query";
 mysqli_free_result($result);
 
-*/
+
 $arr=$_POST['txt'];
     foreach($arr as $value){
-        foreach($value as $key=>$val){
-            $i = 0;
-            switch($key){
-                case "image": $image = $val;
-                break;
-                case "title": $title = $val;
-                break;
-                case "price": $price = $val;
-                break;
-                case "description": $desc = $val;
-                break;
-
-            }
-            if($i=3){
-            echo $image, $title, $price, $desc;
-            echo "</br>";
-            }
-            $i++;
+        while($value as $key=>$val){
+            echo $key[];
+            echo $val[]
         }
     }
+*/
+$info = array('кофе', 'коричневый', 'кофеин');
 
+// Составить список всех переменных
+list($drink, $color, $power) = $info;
+echo "$drink - $color, а $power делает его особенным.\n";
 /*
     // Переменные с формы
     $name = $_POST['name'];
