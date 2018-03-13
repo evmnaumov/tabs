@@ -14,9 +14,9 @@ $arr=$_POST['txt'];
         $title = $value["title"];
         $price = $value["price"];
         $desc = $value["description"];
+        echo "$image, $title, $price, $desc<br>";
         $query = 'INSERT INTO test (image, title, price, description) VALUES ("$image","$title","$price","$desc")';
-        $result = mysqli_query($link, $query);
-        mysqli_free_result($result);
+        mysqli_query($link, $query);
     }
 
 
