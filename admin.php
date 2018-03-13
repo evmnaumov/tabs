@@ -15,10 +15,10 @@ foreach ($xml->item as $item) {
     if($i<1){
         $a="showing";
     };
-        ?><input type='text' name='txt[<?php echo $i;?>][image]' value='img/<?php echo $item->image;?>'>
-          <input type='text' name='txt[<?php echo $i;?>][title]' value='<?php echo $item->title;?>'>
-          <input type='text' name='txt[<?php echo $i;?>][price]' value='<?php echo $item->price;?>'>
-          <input type='text' name='txt[<?php echo $i;?>][description]' value='<?php echo $item->description;?>'>
+        ?><input type='text' name='txt[<?php echo $i;?>][0]' value='img/<?php echo $item->image;?>'>
+          <input type='text' name='txt[<?php echo $i;?>][1]' value='<?php echo $item->title;?>'>
+          <input type='text' name='txt[<?php echo $i;?>][2]' value='<?php echo $item->price;?>'>
+          <input type='text' name='txt[<?php echo $i;?>][3]' value='<?php echo $item->description;?>'>
 		  <br>
     <?php
     $i=$i+1;
