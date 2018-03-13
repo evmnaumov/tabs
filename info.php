@@ -12,8 +12,9 @@ while($row = mysqli_fetch_array($result, MYSQLI_NUM)){
 // fetch the result row.
 //;
 $data[] = $row;
-foreach($data as $value){
-    echo "$value<br>";
+foreach($data as $key=>$value){
+    foreach($value as $key=>$val){
+    echo "$val<br>";}
 }       //["image"] .", " . $data["title"] .", " . $data["price"] . ", " . $data["description"] . "<br>";
 mysqli_free_result($result);
 }
