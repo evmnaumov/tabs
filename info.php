@@ -12,5 +12,7 @@ while($result = mysqli_query($link,'SELECT * FROM `test`')){
 $data = mysqli_fetch_array($result, MYSQLI_NUM);
 
 echo "$data[1], $data[2], $data[3], $data[4]<br>";
+mysqli_free_result($result);
 }
+mysqli_close($link);
 ?>
