@@ -6,12 +6,14 @@ if (mysqli_connect_errno()) {
 }
 $tabs_db = mysqli_select_db($link,'tabs');
 // get the result object.
-while($data = mysqli_query($link,'SELECT * FROM `test`')){
+$data=array();
+$result = mysqli_query($link,'SELECT * FROM `test`');
+while($row = mysqli_fetch_array($result, MYSQLI_NUM)){
 // fetch the result row.
-//$data = mysqli_fetch_array($result, MYSQLI_NUM);
-
+//;
+$data[] = $row;
 echo "$data[1], $data[2], $data[3], $data[4]<br>";
-mysqli_free_result($data);
+mysqli_free_result($result);
 }
 mysqli_close($link);
 ?>
