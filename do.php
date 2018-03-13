@@ -4,12 +4,13 @@
 $link = mysqli_connect('localhost', 'tabs', 'rebOOt365');
 if (!$link) {
     die('Ошибка соединения: ' . mysql_error());
-}else{
-echo 'Успешно соединились';
 }
+//else{
+//echo 'Успешно соединились';
+//}
 $tabs_db = mysqli_select_db('tabs');
-//$query = 'INSERT INTO test (image, title, price, description) VALUES ("2.jpg","HAN2","85","Best HAN2")';
-$query = 'SELECT * FROM `test`';
+$query = 'INSERT INTO test (image, title, price, description) VALUES ("2.jpg","HAN2","85","Best HAN2")';
+//$query = 'SELECT * FROM `test`';
 $result = mysqli_query($query) or die('Запрос не удался: ' . mysql_error());
 echo "$query";
 mysqli_free_result($result);
