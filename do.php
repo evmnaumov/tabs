@@ -2,18 +2,16 @@
     // Соединяемся, выбираем базу данных
 
 $link = mysqli_connect('localhost', 'tabs', 'rebOOt365');
-if (!$link) {
-    die('Ошибка соединения: ' . mysql_error());
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
 }
-//else{
-//echo 'Успешно соединились';
-//}
-$tabs_db = mysql_select_db('tabs');
+$tabs_db = mysqli_select_db($link,'tabs');
 $query = 'INSERT INTO test (image, title, price, description) VALUES ("2.jpg","HAN2","85","Best HAN2")';
 //$query = 'SELECT * FROM `test`';
-$result = mysql_query($query) or die('Запрос не удался: ' . mysql_error());
+$result = mysqli_query($link, $query);
 echo "$query";
-mysql_free_result($result);
+mysqli_free_result($result);
 
 /*
 if (!$tabs_db)
@@ -63,5 +61,5 @@ if (!$tabs_db)
 
 
 
-mysql_close($link);
+mysqli_close($link);
 ?>
