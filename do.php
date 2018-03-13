@@ -9,15 +9,30 @@ if (mysqli_connect_errno()) {
 $tabs_db = mysqli_select_db($link,'tabs');
 $query = 'INSERT INTO test (image, title, price, description) VALUES ("2.jpg","HAN2","85","Best HAN2")';
 //$query = 'SELECT * FROM `test`';
+
+
+
 $result = mysqli_query($link, $query);
 echo "$query";
 mysqli_free_result($result);
-*/
 
+*/
 $arr=$_POST['txt'];
     foreach($arr as $value){
         foreach($value as $key=>$val){
-            echo "$key, $val";
+            switch($key){
+                case "image": $image = $val;
+                break;
+                case "title": $title = $val;
+                break;
+                case "price": $price = $val;
+                break;
+                case "description": $desc = $val;
+                break;
+
+            }
+            echo $image, $title, $price, $desc;
+            echo "</br>";
         }
     }
 
