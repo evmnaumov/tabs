@@ -1,33 +1,25 @@
 <?php
     // Соединяемся, выбираем базу данных
-/*
+
 $link = mysqli_connect('localhost', 'tabs', 'rebOOt365');
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
 $tabs_db = mysqli_select_db($link,'tabs');
-$query = 'INSERT INTO test (image, title, price, description) VALUES ("2.jpg","HAN2","85","Best HAN2")';
-//$query = 'SELECT * FROM `test`';
 
-
-
-$result = mysqli_query($link, $query);
-echo "$query";
-mysqli_free_result($result);
-
-*/
 $arr=$_POST['txt'];
     foreach($arr as $value){
-        //list($image, $title, $price, $desc) = $value;
         $image = $value["image"];
         $title = $value["title"];
-        $price = $value["orice"];
+        $price = $value["price"];
         $desc = $value["description"];
-        echo "$image, $title, $price, $desc<br>";
+        $query = 'INSERT INTO test (image, title, price, description) VALUES ("$image","$title","$price","$desc")';
+        $result = mysqli_query($link, $query);
+        mysqli_free_result($result);
     }
 
 
 
-//mysqli_close($link);
+mysqli_close($link);
 ?>
