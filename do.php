@@ -7,24 +7,27 @@ if (!$link) {
 }else{
 echo 'Успешно соединились';
 }
+$tabs_db = mysqli_select_db('tabs');
+$query = "INSERT INTO (image, title, price, description) VALUES ('1.jpg','HAN','75','Best HAN')";
+$result = mysqli_query($query) or die('Запрос не удался: ' . mysql_error());
+mysqli_free_result($result);
 
-$tabs = mysql_select_db('tabs');
-if (!$tabs)
+/*
+if (!$tabs_db)
 {
      die('Не удалось выбрать базу данных');
 }else{
     echo 'Успешно выбрали';
 }
-
+*/
 //if (isset($_POST['txt'])){
- $arr=$_POST['txt'];
-    foreach($arr as $value){
-        foreach($value as $key=>$val){
-            echo "$key, $val";
-        }
+// $arr=$_POST['txt'];
+//    foreach($arr as $value){
+//        foreach($value as $key=>$val){
+//            echo "$key, $val";
+//        }
+//    }
 
-
-    }
 /*
     // Переменные с формы
     $name = $_POST['name'];
