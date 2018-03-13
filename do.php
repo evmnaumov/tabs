@@ -1,6 +1,6 @@
 <?php
     // Соединяемся, выбираем базу данных
-
+/*
 $link = mysqli_connect('localhost', 'tabs', 'rebOOt365');
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
@@ -12,22 +12,14 @@ $query = 'INSERT INTO test (image, title, price, description) VALUES ("2.jpg","H
 $result = mysqli_query($link, $query);
 echo "$query";
 mysqli_free_result($result);
-
-/*
-if (!$tabs_db)
-{
-     die('Не удалось выбрать базу данных');
-}else{
-    echo 'Успешно выбрали';
-}
 */
-//if (isset($_POST['txt'])){
-// $arr=$_POST['txt'];
-//    foreach($arr as $value){
-//        foreach($value as $key=>$val){
-//            echo "$key, $val";
-//        }
-//    }
+
+$arr=$_POST['txt'];
+    foreach($arr as $value){
+        foreach($value as $key=>$val){
+            echo "$key, $val";
+        }
+    }
 
 /*
     // Переменные с формы
