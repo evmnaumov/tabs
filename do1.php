@@ -1,7 +1,7 @@
 <?php
     // Соединяемся, выбираем базу данных
 $host="localhost";
-$user="root";
+$user="tabs";
 $pass="rebOOt365";
 
 $link = mysql_connect('$host', '$user', '$pass');
