@@ -9,8 +9,7 @@ $tabs_db = mysqli_select_db($link,'tabs');
 //$data=array();
 $result = mysqli_query($link,'SELECT * FROM `test`');
 foreach($result as $key=>$value){
-    foreach($value as $key=>$val){
-    echo $val["title"]. "<br>";}
+    echo $value["title"]. "<br>";
 }       //["image"] .", " . $data["title"] .", " . $data["price"] . ", " . $data["description"] . "<br>";
 mysqli_free_result($result);
 //}
