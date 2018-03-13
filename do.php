@@ -20,9 +20,14 @@ mysqli_free_result($result);
 $arr=$_POST['txt'];
     foreach($arr as $value){
         //list($image, $title, $price, $desc) = $value;
-        //echo "$image, $title, $price, $desc";
-        echo $value;
-        }
+        //echo "$image, $title, $price, $desc<br>";
+        
+        echo "$value[0]<br>";
+        echo "$value[1]<br>";
+        echo "$value[2]<br>";
+        echo "$value[3]<br>";
+        echo "<br>";
+    }
 
 
 
