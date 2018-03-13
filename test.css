@@ -1,0 +1,75 @@
+/*
+основные стили:
+они заставляют слайд-шоу работать
+*/
+#slides {
+    position: relative;
+    height: 800px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+/*
+дополнительные стили:
+внешний вид вы можете изменить по своему усмотрению
+*/
+#content{
+    position: absolute;
+    width: 1280px;
+    height: 800px;
+    left: 0;
+    top: 0;
+}
+.slide {
+    font-size: 70px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    background-size: cover;
+    color: #fff;
+}
+.slide p{
+    margin: 0;
+}
+.title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 20px 40px;
+    border-radius: 0px 0px 50px 0px;
+}
+.price{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 20px 40px;
+    border-radius: 0px 0px 0px 50px;
+}
+.description{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 20px 40px;
+    width: 1200px;
+}

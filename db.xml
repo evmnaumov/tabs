@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<items>
+	<item>
+		<title>HAN</title>
+		<price>70grn</price>
+		<description>Best HAN!</description>
+		<image>1.jpg</image>
+	</item>
+	<item>
+		<title>HAN2</title>
+		<price>72grn</price>
+		<description>Best HAN2!</description>
+		<image>2.jpg</image>
+	</item>
+	<item>
+		<title>HAN3</title>
+		<price>72grn</price>
+		<description>Best HAN3!</description>
+		<image>3.jpg</image>
+	</item>
+	<item>
+		<title>HAN4</title>
+		<price>72grn</price>
+		<description>Best HAN4!asdfl;kj asdf asdf asdfasdfasdf asdfasdfasdf asdfasdfasdfasdf</description>
+		<image>4.jpg</image>
+	</item>
+</items>
