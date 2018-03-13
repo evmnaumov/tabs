@@ -7,7 +7,18 @@
 <div id="content">
 <form action='do.php' method='post'>
 <?php
-$xml = simplexml_load_file("db.xml");
+//$xml = simplexml_load_file("db.xml");
+
+    // Соединяемся, выбираем базу данных
+
+    $link = mysqli_connect('localhost', 'tabs', 'rebOOt365');
+    if (mysqli_connect_errno()) {
+        printf("Connect failed: %s\n", mysqli_connect_error());
+        exit();
+    }
+    $tabs_db = mysqli_select_db($link,'tabs');
+    
+
 $i=0;
 foreach ($xml->item as $item) {
     global $i;
@@ -22,7 +33,9 @@ foreach ($xml->item as $item) {
 		  <br>
     <?php
     $i=$i+1;
-};?>
+};
+mysqli_close($link);
+?>
 		  <input type='submit' value='Отправить'>
 </form>
 </div>
