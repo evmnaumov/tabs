@@ -7,9 +7,10 @@ if (mysqli_connect_errno()) {
 $tabs_db = mysqli_select_db($link,'tabs');
 
 // get the result object.
-$result = mysqli_query($link,'SELECT * FROM `test`');
+while($result = mysqli_query($link,'SELECT * FROM `test`')){
 // fetch the result row.
-$data = $result->fetch_assoc();
+$data = mysqli_fetch_array($result, MYSQLI_NUM);
 
-return $data;
+echo "$data[1], $data[2], $data[3], $data[4]<br>";
+}
 ?>
