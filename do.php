@@ -16,20 +16,12 @@ $result = mysqli_query($link, $query);
 echo "$query";
 mysqli_free_result($result);
 
-
+*/
 $arr=$_POST['txt'];
     foreach($arr as $value){
-        while($value as $key=>$val){
-            echo $key[];
-            echo $val[]
+        list($image, $title, $price, $desc) = $value;
+        echo "$image, $title, $price, $desc";
         }
-    }
-*/
-$info = array('кофе', 'коричневый', 'кофеин');
-
-// Составить список всех переменных
-list($drink, $color, $power) = $info;
-echo "$drink - $color, а $power делает его особенным.\n";
 /*
     // Переменные с формы
     $name = $_POST['name'];
