@@ -8,7 +8,7 @@ if (!$link) {
 echo 'Успешно соединились';
 }
 $tabs_db = mysql_select_db('tabs');
-$query = 'INSERT INTO "test" (image, title, price, description) VALUES ("1.jpg","HAN","75","Best HAN")';
+$query = 'INSERT INTO test (image, title, price, description) VALUES ("2.jpg","HAN2","85","Best HAN2")';
 $result = mysql_query($query) or die('Запрос не удался: ' . mysql_error());
 mysql_free_result($result);
 
