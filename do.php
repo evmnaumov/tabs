@@ -4,11 +4,17 @@
 $link = mysqli_connect('localhost', 'tabs', 'rebOOt365');
 if (!$link) {
     die('Ошибка соединения: ' . mysql_error());
-}
+}else{
 echo 'Успешно соединились';
+}
 
-mysql_select_db('tabs') or die('Не удалось выбрать базу данных');
-
+$tabs = mysql_select_db('tabs');
+if (!$tabs)
+{
+     die('Не удалось выбрать базу данных');
+}else{
+    echo 'Успешно выбрали';
+}
 
 //if (isset($_POST['txt'])){
  $arr=$_POST['txt'];
