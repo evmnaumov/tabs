@@ -7,7 +7,7 @@ if (mysqli_connect_errno()) {
 $tabs_db = mysqli_select_db($link,'tabs');
 
 // get the result object.
-$result = $mysqli->query('SELECT * FROM `test`');
+$result = mysqli_query('SELECT * FROM `test`');
 // fetch the result row.
 $data = $result->fetch_assoc();
 
