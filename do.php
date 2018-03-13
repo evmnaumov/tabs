@@ -3,16 +3,16 @@
 
 $link = mysqli_connect('localhost', 'tabs', 'rebOOt365');
 if (!$link) {
-    die('Ошибка соединения: ' . mysqli_error());
+    die('Ошибка соединения: ' . mysql_error());
 }
 echo 'Успешно соединились';
 
-mysqli_select_db('tabs') or die('Не удалось выбрать базу данных');
+mysql_select_db('tabs') or die('Не удалось выбрать базу данных');
 
 
 //if (isset($_POST['txt'])){
- 
-    foreach($_POST['txt'] as $value){
+ $arr=$_POST['txt'];
+    foreach($arr as $value){
         foreach($value as $key=>$val){
             echo "$key, $val";
         }
