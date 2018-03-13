@@ -20,6 +20,7 @@ mysqli_free_result($result);
 $arr=$_POST['txt'];
     foreach($arr as $value){
         foreach($value as $key=>$val){
+            $i = 0;
             switch($key){
                 case "image": $image = $val;
                 break;
@@ -31,8 +32,11 @@ $arr=$_POST['txt'];
                 break;
 
             }
+            if($i=3){
             echo $image, $title, $price, $desc;
             echo "</br>";
+            }
+            $i++;
         }
     }
 
