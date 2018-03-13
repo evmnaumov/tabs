@@ -7,10 +7,12 @@ if (!$link) {
 }else{
 echo 'Успешно соединились';
 }
-$tabs_db = mysql_select_db('tabs');
-$query = 'INSERT INTO test (image, title, price, description) VALUES ("2.jpg","HAN2","85","Best HAN2")';
-$result = mysql_query($query) or die('Запрос не удался: ' . mysql_error());
-mysql_free_result($result);
+$tabs_db = mysqli_select_db('tabs');
+//$query = 'INSERT INTO test (image, title, price, description) VALUES ("2.jpg","HAN2","85","Best HAN2")';
+$query = 'SELECT * FROM `test`';
+$result = mysqli_query($query) or die('Запрос не удался: ' . mysql_error());
+echo "$query";
+mysqli_free_result($result);
 
 /*
 if (!$tabs_db)
@@ -60,5 +62,5 @@ if (!$tabs_db)
 
 
 
-mysql_close($link);
+mysqli_close($link);
 ?>
