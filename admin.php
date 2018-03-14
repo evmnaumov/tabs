@@ -19,7 +19,7 @@ $tabs_db = mysqli_select_db($link,'tabs');
 
 if($_POST['txt']){
 
-    mysqli_query($link, 'DELET FROM `test`');
+    mysqli_query($link, 'DELETE FROM `test`');
     $arr=$_POST['txt'];
     foreach($arr as $value){
         $image = $value["image"];
