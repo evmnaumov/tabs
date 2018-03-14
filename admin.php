@@ -16,9 +16,25 @@ if (mysqli_connect_errno()) {
     exit();
 }
 $tabs_db = mysqli_select_db($link,'tabs');
-$result = mysqli_query($link,'SELECT * FROM `test`');
 
-$i=0;
+if($_POST['txt']){
+
+    mysqli_query($link, 'DELET FROM `test`');
+    $arr=$_POST['txt'];
+    foreach($arr as $value){
+        $image = $value["image"];
+        $title = $value["title"];
+        $price = $value["price"];
+        $desc = $value["description"];
+        echo "$image, $title, $price, $desc<br>";
+        $query = 'INSERT INTO test (image, title, price, description) VALUES ("'.$image.'","'.$title.'","'.$price.'","'.$desc.'")';
+        echo "$query <br>";
+        mysqli_query($link, $query);
+    }
+}
+
+$result = mysqli_query($link,'SELECT * FROM `test`');
+$i=1;
 foreach ($result as $item) {
     global $i;
     $a="";
@@ -35,6 +51,10 @@ foreach ($result as $item) {
 };
 mysqli_close($link);
 ?>
+        <input type='text' name='txt[0][image]' value=''>
+        <input type='text' name='txt[0][title]' value=''>
+        <input type='text' name='txt[0][price]' value=''>
+        <input type='text' name='txt[0][description]' value=''>
 		  <input type='submit' value='Отправить'>
 </form>
 </div>
