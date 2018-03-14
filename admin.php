@@ -5,7 +5,7 @@
 </head>
 <body>
 <div id="content">
-<form action='do.php' method='post'>
+<form action='admin.php' method='post'>
 <?php
 //$xml = simplexml_load_file("db.xml");
 
