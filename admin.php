@@ -34,12 +34,8 @@ if($_POST['txt']){
 $result = mysqli_query($link,'SELECT * FROM `test`');
 $i=1;
 foreach ($result as $item) {
-    global $i;
-    $a="";
-    if($i<1){
-        $a="showing";
-    };
-        ?><input type='text' name='txt[<?php echo $i;?>][image]' value='<?php echo $item["image"];?>'>
+    global $i;?>
+          <input type='text' name='txt[<?php echo $i;?>][image]' value='<?php echo $item["image"];?>'>
           <input type='text' name='txt[<?php echo $i;?>][title]' value='<?php echo $item["title"];?>'>
           <input type='text' name='txt[<?php echo $i;?>][price]' value='<?php echo $item["price"];?>'>
           <input type='text' name='txt[<?php echo $i;?>][description]' value='<?php echo $item["description"];?>'>

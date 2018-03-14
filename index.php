@@ -23,10 +23,10 @@ foreach ($result as $item) {
     if($i<1){
         $a="showing";
     };
-        ?><li class="slide <?php echo $a;?>" style="background-image: url(img/<?php echo $result["image"];?>);">
-            <p class="title"><?php echo $result["title"];?></p>
-            <p class="price"><?php echo $result["price"];?></p>
-            <p class="description"><?php echo $result["description"];?></p>
+        ?><li class="slide <?php echo $a;?>" style="background-image: url(img/<?php echo $item["image"];?>);">
+            <p class="title"><?php echo $item["title"];?></p>
+            <p class="price"><?php echo $item["price"];?></p>
+            <p class="description"><?php echo $item["description"];?></p>
         </li>
     <?php
     $i=$i+1;
