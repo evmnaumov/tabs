@@ -25,7 +25,7 @@ foreach ($result as $item) {
     if($i<1){
         $a="showing";
     };
-        ?><input type='text' name='txt[<?php echo $i;?>][image]' value='img/<?php echo $item["image"];?>'>
+        ?><input type='text' name='txt[<?php echo $i;?>][image]' value='<?php echo $item["image"];?>'>
           <input type='text' name='txt[<?php echo $i;?>][title]' value='<?php echo $item["title"];?>'>
           <input type='text' name='txt[<?php echo $i;?>][price]' value='<?php echo $item["price"];?>'>
           <input type='text' name='txt[<?php echo $i;?>][description]' value='<?php echo $item["description"];?>'>
