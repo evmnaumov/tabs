@@ -26,9 +26,7 @@ if($_POST['txt']){
         $title = $value["title"];
         $price = $value["price"];
         $desc = $value["description"];
-        echo "$image, $title, $price, $desc<br>";
         $query = 'INSERT INTO test (image, title, price, description) VALUES ("'.$image.'","'.$title.'","'.$price.'","'.$desc.'")';
-        echo "$query <br>";
         mysqli_query($link, $query);
     }
 }
